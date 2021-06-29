@@ -19,11 +19,19 @@ const SearchContainer = ({ setPostList }) => {
   const handleButtonClick = async () => {
     //   return if blank username
     if (username === null) return;
-    console.log(username);
     const data = await Axios.post("/api/get-user-data", {
       username,
     });
-    console.log(data);
+    // build an array of commentCount and likeCount
+    const tempList = data.data.posts.map((post) => {
+      return {
+        likes: post.likesCount,
+        comments: post.commentsCount,
+        pic: post.photo,
+        name: data.data.fullName,
+      };
+    });
+    setPostList(tempList);
   };
 
   return (

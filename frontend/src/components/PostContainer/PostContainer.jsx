@@ -3,7 +3,6 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import styles from "./styles";
 import Card from "../../shared/MUICard";
-import { useState } from "react";
 
 const PostContainer = ({ postList }) => {
   const classes = styles();
@@ -21,8 +20,25 @@ const PostContainer = ({ postList }) => {
         justify="center"
         alignItems="center"
       >
-        {postList.forEach((post, index) => {
-          return <Card></Card>;
+        {postList.map((post, index) => {
+          return (
+            <Grid
+              className={classes.cardContainerStyle}
+              item
+              container
+              key={index}
+              sm={6}
+              xs={12}
+              justify="center"
+            >
+              <Card
+                numLikes={post.likes}
+                numComments={post.comments}
+                imgUrl={post.pic}
+                username={post.name}
+              ></Card>
+            </Grid>
+          );
         })}
       </Grid>
     </Grid>

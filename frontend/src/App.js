@@ -5,7 +5,7 @@ import SearchContainer from "./components/SearchContainer/SearchContainer";
 import PostContainer from "./components/PostContainer/PostContainer";
 
 function App() {
-  const [postList, setpostList] = useState([]);
+  const [postList, setPostList] = useState([]);
 
   return (
     <Grid
@@ -15,8 +15,10 @@ function App() {
       justify="center"
       className="App"
     >
-      <SearchContainer></SearchContainer>
-      <PostContainer postList={postList}></PostContainer>
+      <SearchContainer setPostList={setPostList}></SearchContainer>
+      {postList.length > 0 && (
+        <PostContainer postList={postList}></PostContainer>
+      )}
     </Grid>
   );
 }
