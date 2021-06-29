@@ -47,10 +47,12 @@ const SearchContainer = ({ setPostList }) => {
       alignItems="center"
     >
       <Grid justify="center" className={classes.titleContainer} container item>
-        <Typography variant="h1">Insta Scraper</Typography>
+        <Typography className={classes.title} align="center" variant="h1">
+          Insta Scraper
+        </Typography>
       </Grid>
       <Grid justify="center" className={classes.descContainer} container item>
-        <Typography variant="body1">
+        <Typography variant="body1" align="center">
           This will allow us to find a user on insta without even logging into
           an account.
         </Typography>

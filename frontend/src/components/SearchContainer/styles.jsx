@@ -13,6 +13,11 @@ const useStyles = makeStyles(() => ({
   buttonContainer: {
     padding: "5rem",
   },
+  title: {
+    "@media (max-width: 450px)": {
+      fontSize: "3rem",
+    },
+  },
 }));
 
 export default useStyles;

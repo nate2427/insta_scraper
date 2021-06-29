@@ -63,6 +63,19 @@ router.post("/api/get-user-data", async (req, res) => {
           time: 1605917041,
           location: null,
         },
+        {
+          id: "2446931950146244085",
+          shortcode: "CH1P6TuBU31",
+          photo:
+            "https://scontent-prg1-1.cdninstagram.com/v/t51.2885-15/e35/p1080x1080/126838948_202552767996560_4560560924720673_n.jpg?_nc_ht=scontent-prg1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=doGn1dkB44gAX84lb7d&tp=1&oh=4c68a21d7f75a808b9ca21dac476554d&oe=5FE070D8",
+          isVideo: false,
+          description:
+            "Can’t Viv with ‘em, can’t Viv without ‘em! :-) #FreshPrinceReunion",
+          commentsCount: 6396,
+          likesCount: 1320494,
+          time: 1605917041,
+          location: null,
+        },
       ],
     });
   } catch (e) {

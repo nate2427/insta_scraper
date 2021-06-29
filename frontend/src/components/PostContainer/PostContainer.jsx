@@ -9,7 +9,7 @@ const PostContainer = ({ postList }) => {
   return (
     <Grid container justify="center">
       <Grid item container justify="center">
-        <Typography variant="h2">Last Five Post</Typography>
+        <Typography variant="h2">Last {postList.length} Post</Typography>
       </Grid>
       <Grid
         container
