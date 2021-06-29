@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import styles from "./styles";
 import Axios from "axios";
 
-const SearchContainer = () => {
+const SearchContainer = ({ setPostList }) => {
   const classes = styles();
   const [username, setUsername] = useState(null);
 
